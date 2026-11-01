@@ -1,0 +1,187 @@
+
+
+
+
+
+
+
+
+
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saltgrave Prelaunch</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Alegreya:ital,wght@0,400;0,600;1,400&family=Alegreya+Sans+SC:wght@500;700&family=Alegreya+Sans:wght@500;700&display=swap"><style>
+/* Layout: a storm-at-night campaign scroll; one 680px story column (Kickstarter's own width) inside full-bleed art bands */
+:root {
+  --abyss: #0a1315; --deep: #10201f; --tide: #18302d; --verdigris: #6fb8a5; --brass: #cfa65c; --bone: #e9e2d1;
+  --mist: #9aaaa4; --rope: #3a4d47; --parch: #e8dcc0; --ink: #2b211a; --blood: #7a2a22;
+  --display: "IM Fell English SC", "Iowan Old Style", Georgia, serif;
+  --display-i: "IM Fell English", "Iowan Old Style", Georgia, serif;
+  --body: "Alegreya", "Iowan Old Style", Georgia, serif;
+  --label: "Alegreya Sans SC", "Gill Sans", "Segoe UI", sans-serif;
+  --num: "Alegreya Sans", "Gill Sans", "Segoe UI", sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box }
+body { background: var(--abyss); color: var(--bone); font: 400 19px/1.6 var(--body); margin: 0 }
+img { max-width: 100%; display: block }
+a { color: var(--verdigris) }
+:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)) }
+.col { max-width: 680px; margin: 0 auto }
+.label { font: 700 13px/1.2 var(--label); letter-spacing: .14em; text-transform: lowercase; color: var(--brass) }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; text-wrap: balance; margin: 0; line-height: 1.05 }
+h2 { font-size: clamp(30px, 4.4vw, 46px); color: var(--bone) }
+h3 { font-size: 26px }
+p { margin: 0 }
+.specbar { background: var(--tide); color: var(--mist); font: 500 14px/1.4 var(--num); text-align: center; padding-block: 8px }
+.specbar b { color: var(--bone) }
+/* hero */
+.hero { position: relative; isolation: isolate; overflow: hidden }
+.hero > img { width: 100%; aspect-ratio: 16/9; object-fit: cover; max-height: 760px }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,19,21,.55) 0%, rgba(10,19,21,0) 28%, rgba(10,19,21,0) 60%, var(--abyss) 100%); z-index: 0 }
+.hero .title { position: absolute; inset: 0 0 auto; z-index: 1; text-align: center; padding-block: clamp(18px, 4vw, 54px) }
+.hero .pre { font: 700 clamp(11px, 1.3vw, 15px)/1 var(--label); letter-spacing: .3em; color: var(--brass) }
+.hero h1 { font-size: clamp(54px, 11vw, 148px); letter-spacing: .02em; color: var(--bone); text-shadow: 0 4px 30px rgba(0,0,0,.7) }
+.hero .sub { font: italic 400 clamp(17px, 2.2vw, 28px)/1.2 var(--display-i); color: var(--bone); text-shadow: 0 2px 12px #000 }
+/* funding panel, in Kickstarter's own vocabulary */
+.fund { position: relative; z-index: 2; margin-top: clamp(-120px, -9vw, -40px); display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center;
+  background: rgba(16,32,31,.92); border: 1px solid var(--rope); padding: 26px 28px }
+.fund .tag { font: italic 400 22px/1.35 var(--display-i); color: var(--bone) }
+.bar { height: 8px; background: var(--rope); margin-block: 14px 16px; position: relative }
+.bar i { position: absolute; inset: 0 auto 0 0; background: var(--verdigris) }
+.stats { display: grid; grid-template-columns: repeat(3, auto); gap: 6px 26px; font-variant-numeric: tabular-nums }
+.stats b { display: block; font: 700 30px/1.1 var(--num); color: var(--verdigris) }
+.stats b.w { color: var(--bone) }
+.stats span { font: 500 14px/1.3 var(--num); color: var(--mist) }
+.btn { display: inline-block; background: var(--verdigris); color: var(--abyss); font: 700 17px/1 var(--num); letter-spacing: .04em; padding: 16px 26px; text-decoration: none; border: 0; cursor: pointer }
+.btn:hover { background: var(--bone) }
+.btn.ghost { background: transparent; color: var(--bone); border: 1px solid var(--rope) }
+section { padding-block: clamp(56px, 8vw, 96px) }
+.hook { font: italic 400 clamp(24px, 3.3vw, 34px)/1.35 var(--display-i); text-align: center; color: var(--bone); max-width: 760px; margin: 0 auto }
+.inside { display: grid; grid-template-columns: repeat(4, 1fr); border-block: 1px solid var(--rope); margin-top: 48px }
+.inside div { padding: 22px 8px; text-align: center; border-left: 1px solid var(--rope) }
+.inside div:first-child { border-left: 0 }
+.inside b { display: block; font: 400 52px/1 var(--display); color: var(--brass); font-variant-numeric: tabular-nums }
+.inside span { font: 700 13px/1.3 var(--label); letter-spacing: .1em; color: var(--mist) }
+/* story */
+.story { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 56px); align-items: center }
+.story + .story { margin-top: clamp(56px, 8vw, 96px) }
+.story.flip > .art { order: 2 }
+.story .art img { width: 100%; border: 1px solid var(--rope) }
+.story .txt { display: grid; gap: 14px; min-width: 0 }
+.story.wide { grid-template-columns: 1fr }
+.story.wide .art img { aspect-ratio: 21/9; object-fit: cover }
+.story.wide .txt { max-width: 680px; margin: 0 auto }
+.stat { background: var(--parch); color: var(--ink); padding: 18px 20px; font: 400 15px/1.45 var(--num); border-top: 4px solid var(--blood); border-bottom: 4px solid var(--blood); margin-top: 6px }
+.stat h4 { font: 400 26px/1 var(--display); color: var(--blood); margin: 0 }
+.stat .ty { font-style: italic; font-family: var(--body); margin-bottom: 8px }
+.stat .row { display: flex; flex-wrap: wrap; gap: 4px 18px; border-block: 1px solid #b59a72; padding-block: 6px; margin-block: 6px; font-variant-numeric: tabular-nums }
+.stat b { color: var(--blood) }
+/* product */
+.product { background: var(--deep) }
+.product .grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 40px; align-items: center }
+.product ul { margin: 14px 0 0; padding: 0; list-style: none; display: grid; gap: 8px }
+.product li { padding-left: 22px; position: relative }
+.product li::before { content: ""; position: absolute; left: 0; top: .62em; width: 9px; height: 9px; border: 2px solid var(--brass); transform: rotate(45deg) }
+/* tiers */
+.tiers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 36px }
+.tier { background: var(--deep); border: 1px solid var(--rope); padding: 22px 20px 24px; display: grid; grid-template-rows: auto auto auto 1fr auto; gap: 10px; min-width: 0 }
+.tier.featured { border-color: var(--brass); background: linear-gradient(180deg, #1b2b26, var(--deep)) }
+.tier .t { font: 700 12px/1 var(--label); letter-spacing: .14em; color: var(--abyss); background: var(--mist); justify-self: start; padding: 5px 8px }
+.tier.featured .t { background: var(--brass) }
+.tier h3 { font-size: 24px; color: var(--bone) }
+.tier .p { font: 700 40px/1 var(--num); color: var(--brass); font-variant-numeric: tabular-nums }
+.tier ul { margin: 4px 0 0; padding: 0 0 0 18px; color: var(--mist); font-size: 16px; display: grid; gap: 4px }
+/* add-ons */
+.addons { width: 100%; border-collapse: collapse; margin-top: 28px; font: 500 17px/1.4 var(--num); font-variant-numeric: tabular-nums }
+.addons th { text-align: left; font: 700 13px/1 var(--label); letter-spacing: .14em; color: var(--brass); padding: 0 0 10px; border-bottom: 1px solid var(--brass) }
+.addons th:last-child, .addons td:last-child { text-align: right }
+.addons td { padding: 13px 0; border-bottom: 1px solid var(--rope) }
+.addons tr td:first-child::before { content: ""; display: inline-block; width: 7px; height: 7px; background: var(--verdigris); transform: rotate(45deg); margin-right: 12px; vertical-align: middle }
+/* stretch goals: a bell rope */
+.rope { position: relative; margin-top: 36px; display: grid; gap: 14px; padding-left: 46px }
+.rope::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 4px; background: repeating-linear-gradient(160deg, #6b5536 0 6px, #8a7048 6px 12px) }
+.goal { position: relative; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 14px 18px; background: var(--deep); border: 1px solid var(--rope) }
+.goal::before { content: ""; position: absolute; left: -39px; top: 50%; width: 18px; height: 18px; margin-top: -9px; border-radius: 50%; background: var(--abyss); border: 3px solid var(--rope) }
+.goal.done { border-color: #2f5a50 }
+.goal.done::before { background: var(--verdigris); border-color: var(--verdigris) }
+.goal .amt { font: 700 22px/1 var(--num); color: var(--mist); font-variant-numeric: tabular-nums; white-space: nowrap }
+.goal.done .amt { color: var(--verdigris) }
+.goal .nm { font: 400 21px/1.25 var(--display-i); min-width: 0 }
+.goal .st { font: 700 12px/1 var(--label); letter-spacing: .12em; color: var(--mist) }
+.goal.done .st { color: var(--verdigris) }
+.goal.next { border-color: var(--brass) }
+.goal.next .st { color: var(--brass) }
+/* reviewer panel */
+.review { background: var(--deep); border-top: 1px solid var(--rope) }
+.review .lead { color: var(--mist); max-width: 760px }
+.cmp { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 24px }
+.cmp figure, .exports figure { margin: 0; display: grid; gap: 8px; min-width: 0 }
+.cmp img, .exports img { border: 1px solid var(--rope); width: 100% }
+figcaption { font: 500 15px/1.4 var(--num); color: var(--mist) }
+figcaption b { color: var(--bone) }
+.diff { margin-top: 18px; font: 500 16px/1.5 var(--num); color: var(--mist) }
+.diff code { overflow-wrap: anywhere; font: 500 15px/1.4 ui-monospace, Consolas, monospace; color: var(--bone); background: var(--tide); padding: 1px 6px }
+.exports { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 24px; align-items: start }
+.ads { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 24px }
+.subhead { margin-top: 48px; display: grid; gap: 6px }
+footer { padding-block: 36px; color: var(--mist); font: 500 14px/1.5 var(--num); text-align: center; border-top: 1px solid var(--rope) }
+@media (max-width: 860px) {
+  .fund, .story, .product .grid, .cmp { grid-template-columns: 1fr }
+  .story.flip > .art { order: 0 }
+  .tiers { grid-template-columns: 1fr 1fr }
+  .exports, .ads { grid-template-columns: 1fr 1fr }
+}
+@media (max-width: 520px) {
+  body { font-size: 17px }
+  .tiers, .exports, .ads { grid-template-columns: 1fr }
+  .inside { grid-template-columns: 1fr 1fr }
+  .inside div:nth-child(3) { border-left: 0 }
+  .stats b { font-size: 24px }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero > img { animation: drift 30s ease-in-out infinite alternate }
+  @keyframes drift { from { transform: scale(1.02) } to { transform: scale(1.07) translateY(-1%) } }
+}
+</style></head><body>
+<div class="specbar"><b>Prelaunch version</b> of the spec page. <a href="index.html">Back to the campaign page</a></div>
+
+<header class="hero">
+  <img src="img/keyart.jpg" alt="Saltgrave key art: a lighthouse above a stormy sea and a giant sunken bell">
+  <div class="title"><p class="pre">LANTERNFALL PRESS PRESENTS</p><h1>Saltgrave</h1><p class="sub">30 Drowned One-Shots for 5e</p></div>
+</header>
+<div class="wrap">
+<div class="fund">
+  <div><p class="tag">Thirty one-shots. One drowned bell. Every table will hear it toll.</p></div>
+  <div>
+  
+    <p class="label">prelaunch</p>
+    <p style="margin-block:8px 16px;color:var(--mist);font:500 16px/1.45 var(--num)">Follow the campaign and get the 48-hour early-bird price: the hardcover at £35 instead of £45.</p>
+    <form class="notify" onsubmit="event.preventDefault(); this.querySelector('button').textContent='You will be notified on launch day';">
+      <button class="btn" id="notify" type="submit">Notify me on launch</button>
+    </form>
+  
+  </div>
+</div>
+</div>
+
+<section><div class="wrap"><p class="hook">Something under the sea is ringing a bell. Your players have one night to find out why.</p>
+  <div class="inside"><div><b>30</b><span>one-shot adventures</span></div><div><b>60</b><span>new monsters</span></div><div><b>320</b><span>full-colour pages</span></div><div><b>12</b><span>battle maps</span></div></div></div></section>
+<section style="padding-top:0"><div class="wrap">
+<div class="story  ">
+  <div class="art"><img src="img/bellringer.jpg" alt="Sixty new monsters, ready to use"></div>
+  <div class="txt">
+    <p class="label">Meet the drowned</p>
+    <h2>Sixty new monsters, ready to use</h2>
+    <p>From the Drowned Bell-Ringer to tide-hags and barnacle knights, every creature gets a full stat block, a tactics box and a one-line hook you can read straight to the table.</p>
+    
+    <div class="stat"><h4>Drowned Bell-Ringer</h4><div class="ty">Medium undead, chaotic evil</div>
+      <div class="row"><span><b>Armor Class</b> 15</span><span><b>Hit Points</b> 97 (13d8 + 39)</span><span><b>Speed</b> 30 ft., swim 40 ft.</span><span><b>Challenge</b> 6</span></div>
+      <div>Toll of the Deep. When the Bell-Ringer pulls its rope, each creature within 60 feet must succeed on a DC 15 Wisdom save or be frightened until the end of its next turn.</div></div>
+    
+  </div>
+</div>
+</div></section>
+<section class="product"><div class="wrap grid"><img src="img/book_cover.jpg" alt="The Saltgrave hardcover">
+  <div><p class="label">Launching soon</p><h2>Be first through the door</h2><p style="margin-top:12px;color:var(--mist)">Early backers get the hardcover at £35 for the first 48 hours.</p>
+  <form style="margin-top:18px" onsubmit="event.preventDefault(); this.querySelector('button').textContent='You will be notified on launch day';"><button class="btn" id="notify2" type="submit">Notify me on launch</button></form></div></div></section>
+<footer>Spec campaign page designed by Filip, SkillCut Studio, as a sample. Saltgrave and Lanternfall Press are invented. All art is AI placeholder art.</footer></body></html>
